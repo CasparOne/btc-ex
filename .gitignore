@@ -1,0 +1,15 @@
+/node_modules
+/bower_components
+/.idea
+.project
+.classpath
+*.launch
+.settings/
+.DS_Store
+Thumbs.db
+/vendor/
+/logs/*
+!/logs/README.md
+public/tests
+temp.txt
+test.php
