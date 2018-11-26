@@ -7,7 +7,7 @@ return [
     'btc_ex' => [
         'driver' => getenv('DB_DRIVER'),
         'host' => getenv('DB_HOST'),
-        'database' => getenv('DB_DATABASE2'),
+        'database' => getenv('DB_DATABASE'),
         'username' => getenv('DB_USERNAME'),
         'password' => getenv('DB_PASSWORD'),
         'port' => getenv('DB_PORT'),
