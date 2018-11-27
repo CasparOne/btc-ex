@@ -30,14 +30,23 @@ class User extends BaseModel
         $this->password = password_hash($password, PASSWORD_DEFAULT);
         $this->email = $email;
         $this->save();
-        $accAtr = [
-            'id' => random_int((time() - rand(0, 9999999)), 9999999999),
-            'user_id'=> self::all()->last()->id,
-        ];
         return Account::createAccount(self::all()->last()->id);
-        //return Account::create($accAtr);
-        //$account->save();
+    }
 
+    public static function checkPassword($login, $password) :bool
+    {
+        if (self::isExists($login)) {
+            return password_verify($password,
+                trim(self::where('login', $login)->first()->password));
+        }
+        return false;
+
+    }
+
+    public static function isExists($username) :bool
+    {
+        $login = self::where('login', $username)->exists();
+        return $login;
     }
 
 }

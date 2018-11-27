@@ -12,11 +12,13 @@ class Account extends BaseModel
     public function getCurrency()
     {
         return $this->belongsTo(Currency::getClass(), 'currency_id');
+
     }
 
     public function getTransaction()
     {
         return $this->hasMany(Transaction::getClass(),'account_id');
+
     }
 
     public static function createAccount($userId, $currency_id = null)
@@ -26,7 +28,10 @@ class Account extends BaseModel
         $fields['currency_id'] = $currency_id ? $currency_id : null;
         $account = new self($fields);
         return $account->save();
+
     }
+
+
 
 
 }
