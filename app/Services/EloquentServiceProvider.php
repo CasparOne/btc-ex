@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Services;
+namespace App\Services;
 
 
 use Illuminate\Database\Capsule\Manager;

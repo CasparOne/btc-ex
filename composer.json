@@ -6,14 +6,17 @@
     "twig/twig": "^2.0",
     "monolog/monolog": "^1.17",
     "illuminate/database": "5.2.*",
-    "vlucas/phpdotenv": "^2.4"
+    "vlucas/phpdotenv": "^2.4",
+    "ramsey/uuid": "2.9"
   },
   "require-dev": {
     "fzaninotto/faker": "^1.8"
     },
   "autoload": {
     "psr-4": {
-      "Core\\": "app/Core/"
+      "App\\": "app/",
+      "Modules\\": "modules/",
+      "Src\\": "src/"
     }
   }
 }

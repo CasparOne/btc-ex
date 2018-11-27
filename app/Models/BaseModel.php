@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Core\Models;
+namespace App\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
@@ -18,4 +18,14 @@ abstract class BaseModel extends Model
      * set a connection name
      */
     protected $connection = 'btc_ex';
+
+
+    /**
+     * @return string
+     */
+    public static function getClass() :string
+    {
+        return static::class;
+    }
+
 }

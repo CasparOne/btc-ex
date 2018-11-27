@@ -3,7 +3,7 @@ session_start();
 
 require_once __DIR__ . '/../vendor/autoload.php';
 $config = include __DIR__ . '/../app/config/settings.php';
-$app =  Core\Site::getInstance($config);
+$app =  App\Site::getInstance($config);
 
 
 
